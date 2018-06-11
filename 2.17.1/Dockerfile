@@ -8,5 +8,5 @@ WORKDIR /git-build/git-2.17.1
 RUN make prefix=/usr all \
     && make prefix=/usr install \
     && rm -rf /git-build \
-    && apt-get remove libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
+    && apt-get remove -y libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
 CMD git --version
